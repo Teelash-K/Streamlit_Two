@@ -13,6 +13,7 @@ import time
 #load the model
 model = pickle.load(open('financial_Inc_model.pkl', 'rb'))
 
+
 #add picture from local computer
 import base64
 def add_bg_from_local(image_file):
@@ -43,12 +44,10 @@ st.markdown("<br><br>", unsafe_allow_html = True)
 
 st.markdown("<h6>Overview</h6>", unsafe_allow_html = True)
 
-st.markdown("<p style = 'color : #191717'>One of the prominent issues confronting Africa, with profound implications for both human development and the economy, pertains to the accessibility of banking services, whether for personal or business use. Creative solutions have been devised to extend financial services to populations that were previously overlooked. The East African region, encompassing nations like Kenya, Tanzania, Uganda, and Rwanda, has experienced noteworthy advancements in this regard.</p>", unsafe_allow_html=True)
-
-st.write("Therefore, this application is developed to forecast the probability of individuals possessing or utilizing a bank account.")
+st.markdown("<p style = 'color : #191717'>One of the prominent issues confronting Africa, with profound implications for both human development and the economy, pertains to the accessibility of banking services, whether for personal or business use. Creative solutions have been devised to extend financial services to populations that were previously overlooked. The East African region, encompassing nations like Kenya, Tanzania, Uganda, and Rwanda, has experienced noteworthy advancements in this regard. Therefore, this application is developed to forecast the probability of individuals possessing or utilizing a bank account.</p>", unsafe_allow_html=True)
 
 
-data = pd.read_csv('dataset\Financial_inclusion_dataset.csv')
+data = pd.read_csv('Financial_inclusion_dataset.csv')
 df = pd.read_csv('Feature_Definitions.csv')
 df.reset_index(drop=True, inplace=True)
 # df.drop('Unnamed: 1', inplace = True, axis = 1)
